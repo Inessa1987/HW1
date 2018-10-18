@@ -1,0 +1,26 @@
+table {
+     margin: 30px auto;
+	 border: 1px solid black;
+}
+#table1 {
+	width: 1000px;
+	
+}
+#table2, 
+#table3 {
+	width: 600px;
+}
+#table3 {
+	border-collapse: collapse;
+}
+td,
+th {
+	border: 1px solid black;
+}
+.th3 {
+	text-align: left;
+}
+.td3 {
+	vertical-align: top;
+}
+	
