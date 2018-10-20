@@ -1,94 +1,152 @@
 <!DOCTYPE html>
-  <head>
+<html>
+<head>
     <meta charset="UTF-8">
 	<title>Форма</title>
 	<link rel="stylesheet" href="normalize.css" type="text/css">
 	<link rel="stylesheet" href="style_forms.css" type="text/css">
-  </head>
+</head>
   
-  <body>
-     <div id="container"><form method="get" action="">
-    <h1>Расскажите немного о себе...</h1>
-	  <div class="block">
-	     <h2 class="title1">Коротко о себе</h2>
-		<div class="block1">Имя:<input type="text" name="form_name" value="" size="30"  /></div>
-		<div class="block1" >Фамилия:<input type="text" name="form_sername" value="" size="30" /></div>
-		<div class="block1" >Пол:<input type="radio" name="form_radio" id="form-radio1" value="1" checked />
-		     <label for="form_radio1">Мужской</label>
-			 <input type="radio" name="form_radio" id="form-radio2" value="2"  />
-		     <label for="form_radio2">Женский</label></div>
-		<div class="block1">Возраст:<input type="text" name="age" value="" size="3"/>лет</div>
-	  </div> 
+<body>
+    <div id="container">
+	<form method="get" action="">
+    <h1>Profile edit page</h1>
+	<fieldset class="block">
+	    <legend class="title1">&ensp; Basic info</legend>
+		<table>
+		    <tr>
+			    <td>ID</td>
+				<td><input id="id" type="text" name="page" value="725" size="47" readonly /></td>
+			</tr>
+			<tr>
+			    <td>First Name</td>
+				<td><input type="text" name="form_name" value="" size="47"  /></td>
+			</tr>
+			<tr>
+			    <td>Last Mame</td>
+				<td><input type="text" name="form_sername" value="" size="47" /></td>
+			</tr>
+			<tr>
+			    <td>Password</td>
+				<td><input type="password" maxlength="25" size="47" name="password"></td>
+			</tr>
+			<tr>
+			    <td>Phone</td>
+				<td><input class="placeholder" "type="tel" name="form_phone" value="" placeholder="380" size="46"  /></td>
+			</tr>
+			<tr>
+			    <td>Email</td>
+				<td><input class="placeholder" type="email" name="your-email" value="" placeholder="myemail@placeholder.com" size="46"></td>
+			</tr>
+			<tr>
+			    <td></td>
+				<td>
+				    <input type="checkbox" name="keep_email" value="1" id="keep-email"/>
+				    <label for="keep-email">Keep my email address private
+					<p>We'll remove your public profile email and use<br>
+					1978331+username@users.noreply.localhost</p></label>
+					
+				</td>
+			</tr>
+			<tr>
+			    <td>DOB</td>
+				<td>
+                 <input id="calendar" name="calendar" type="date">
+				 <label for="calendar"><img class="calendar" src="calendar.png" alt=""></label></td>
+			</tr>
+			<tr>
+			    <td>Blog url</td>
+				<td><input class="placeholder" name="blog-url" type="url" value="" size="46" placeholder="http://"></td>
+			</tr>
+			<tr>
+			    <td class="about-me">About&nbsp;me</td>
+				<td><textarea name="about-me" rows="10" cols="45"></textarea></td>
+			</tr>
+			<tr>
+			    <td>Profile&nbsp;picture</td>
+				<td><div id="btn"><label for="files">Choose the file</label></div>
+                 <input id="files" style="visibility:hidden;" name="userfile" accept="image/*" type="file"></td>
+			</tr>
+		</table>
+	</fieldset> 
+	  	     
+	<fieldset class="block">
+	    <legend class="title2">&ensp; Professional info</legend>
+		<table>
+			<tr>
+				<td>Desire&nbsp;to&nbsp;study</td>
+				<td><input type="range" min="0" max="100" step="1" value="75" id="range"></td>
+			</tr>
+			<tr>
+				<td>Experience</td>
+				<td>
+				    <select name="form_select" size="2" id="select">
+			            <option value="1">1</option>
+				        <option value="2">2</option>
+				        <option value="3" selected>3</option>
+						<option value="4">4</option>
+				        <option value="5">5</option>
+						<option value="6">6</option>
+				        <option value="7">7</option>
+						<option value="8">8</option>
+				        <option value="9">9</option>
+						<option value="10">10</option>
+				        <option value="11">11</option>
+						<option value="12">12</option>
+				        <option value="13">13</option>
+						<option value="14">14</option>
+				        <option value="15">15</option>
+			        </select>
+					<label for="select">years</label>
+				</td>
+			</tr>
+		    <tr>
+				<td colspan="2">Development&nbsp;Experience</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<ul>
+					    <li><input type="radio" name="radio1" id="learning"><label for="LtP">Learning to Program</label></li>
+                        <li><input type="radio" name="radio2" id="junior" checked><label for="junior">Junior Developer</label></li>
+                        <li><input type="radio" name="radio3" id="middle"><label for="middle">Mid-Level Developer </label></li>
+                        <li><input type="radio" name="radio4" id="senior"><label for="senior">Senior Developer</label></li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>Country</td>
+				<td>
+					<select name="country" id="country">
+                        <option>- Choose your country -</option>
+                        <option value="Ukraine">Ukraine</option>
+                        <option value="USA">USA</option>
+                        <option value="Thailand">Thailand</option>
+                        <option value="Spain">Spain</option>
+                    </select>
+				</td>
+			</tr>
+			<tr>
+				<td class="skills">Skills</td>
+			    <td>
+					<ul>
+					    <li><input type="checkbox" id="html"    name="checkbox1" value="html" checked><label for="html">HTML</label></li>
+                        <li><input type="checkbox" id="css"     name="checkbox2" value="css"><label for="css">CSS</label></li>
+                        <li><input type="checkbox" id="js"      name="checkbox3" value="js"><label for="js">JavaScript</label></li>
+                        <li><input type="checkbox" id="ruby"    name="checkbox4" value="r"><label for="r">R</label></li>
+                        <li><input type="checkbox" id="scala"   name="checkbox5" value="scala"><label for="scala">Scala</label></li>
+                        <li><input type="checkbox" id="haskell" name="checkbox6" value="haskell"><label for="haskell">Haskell</label></li>
+					</ul>
+				</td>
+			</tr>
+	    </table>
+	</fieldset> 
 	  
-	  <div class="block">
-	     <h2 class="title2">Подробнее о себе</h2>
-		    <div><input type="radio" name="form_radio_1" id="form-radio3" value="3" checked />
-		     <label for="form_radio3">Молодой человек</label></div>
-			<div><input type="radio" name="form_radio_1" id="form-radio4" value="4"  />
-		     <label for="form_radio4">Девушка</label></div>
-			 <div><input type="text" name="date" value="" size="30" />Дата рождения</div>
-			 <div><input type="text" name="family" value="" size="30" />Семейное положение</div>
-			 <div><input type="text" name="status" value="" size="30" />Социальный статус</div>
-			 <div><input type="text" name="address" value="" size="30" />Местожительство</div>
-			 <h3>Что вы обычно делаете на выходных:</h3>
-			    <div><input type="checkbox" name="form_checkbox" value="5" id="id_checkbox1" />
-				    <label for="id_checkbox1">Сплю</label></div>
-				<div><input type="checkbox" name="form_checkbox" value="6" id="id_checkbox2" />
-				    <label for="id_checkbox2">Гуляю с друзьями</label></div>
-				<div><input type="checkbox" name="form_checkbox" value="7" id="id_checkbox3" />
-				    <label for="id_checkbox3">Хожу на рыбалку</label></div>
-				<div><input type="checkbox" name="form_checkbox" value="8" id="id_checkbox4" />
-				    <label for="id_checkbox4">Играю в игры</label></div>
-			<h3>Рассказать о формах в книге, посвященной HTML:</h3>
-			<select name="form_select">
-			    <option value="9">Site frequency</option>
-				<option value="10">Introducing HTML5</option>
-				<option value="11">Responsive Web Design</option>
-				<option value="12">HTML5 for web designers</option>
-			</select>
-			<h3>Сколько книг вы прочитали за свою жизнь:</h3>
-			<div><input type="radio" name="form_radio_2" id="form-radio5" value="13" />
-		     <label for="form_radio5">0-10</label></div>
-			 <div><input type="radio" name="form_radio_2" id="form-radio6" value="14" />
-		     <label for="form_radio6">11-20</label></div>
-			 <div><input type="radio" name="form_radio_2" id="form-radio7" value="15" />
-		     <label for="form_radio7">21-50</label></div>
-			 <div><input type="radio" name="form_radio_2" id="form-radio8" value="16" />
-		     <label for="form_radio8">50+</label></div>
-			 <h3>Ваши комментарии:</h3>
-			 <textarea name="form_bigtext" rows="7" cols="50" placeholder="Оставьте ваш комментарий..."></textarea>
-			 <div><select name="form_select" size="3">
-			    <option value="17">Первая позиция</option>
-				<option value="18" selected>Вторая позиция</option>
-				<option value="19">Третья позиция</option>
-			</select></div>
-	  </div> 
-	  
-	  <div class="block">
-	     <h2 class="title3">И в заключение</h2>
-		 <div><input type="text" name="disabled_field" value="Это поле было введено до вас" size="30" readonly /></div>
-	     <div>Email:<div><input type="email" name="your-email" value="" size="30" /></div></div>
-		 <h3>Хотите подписаться на самую модную рассылку спама?</h3>
-		 <div id="italic">Выберите категории</div>
-			    <div><input type="checkbox" name="form_checkbox1" value="20" id="id_checkbox4" />
-				    <label for="id_checkbox4">Оборудование</label></div>
-				<div><input type="checkbox" name="form_checkbox1" value="21" id="id_checkbox5" />
-				    <label for="id_checkbox5">Как приготовить обеды</label></div>
-				<div><input type="checkbox" name="form_checkbox1" value="22" id="id_checkbox6" />
-				    <label for="id_checkbox6">Заработай миллион за 2 дня!</label></div>
-		 <h3>На сколько сложная задача:</h3>
-			<div><input type="radio" name="form_radio_3" id="form-radio8" value="23" checked />
-		     <label for="form_radio8">Совсем нет</label></div>
-			 <div><input type="radio" name="form_radio_3" id="form-radio9" value="24" />
-		     <label for="form_radio9">Так себе</label></div>
-			 <div><input type="radio" name="form_radio_3" id="form-radio10" value="25" />
-		     <label for="form_radio10">Еле справились</label></div>
-	  </div>
-	  
-	  
-	  <div id="send"><input  type="submit" value="Отправить" name="form_submit" /></div>
+	    <button type="reset">Submit</button>
+        <button type="submit">Cancel</button>
+        <input type="hidden" name="name" value="Inessa">
 	
 	</form>
 	</div>
-  </body>
+</body>
 </html>

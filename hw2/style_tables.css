@@ -1,26 +1,48 @@
 table {
-     margin: 30px auto;
+     margin: 30px;
 	 border: 1px solid black;
+	 width: 1600px;
+	 height: 690px;
+	 border-collapse: collapse;
 }
-#table1 {
-	width: 1000px;
+th, td {
+	border: 1px solid black;
+	width: 100px;
+}
+td {
+	height: 150px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 16px;
+	font-family: Arial;
 	
 }
-#table2, 
-#table3 {
-	width: 600px;
-}
-#table3 {
-	border-collapse: collapse;
-}
-td,
 th {
-	border: 1px solid black;
+	height: 50px;
+	font-size: 25px;
 }
-.th3 {
+.second-row td{
+	height: 20px;
+	text-align: center;
+	
+}
+.lesson-number {
+	font-size: 35px;
+}
+.last-row td{
+	height: 20px;
+	font-size: 18px;
+	font-weight: normal;
 	text-align: left;
+	font-family: "Times New Roman";
 }
-.td3 {
-	vertical-align: top;
+.last-lesson td{
+	height: 60px;
 }
+	
+	
+
+
+	
+
 	
