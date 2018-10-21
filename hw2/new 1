@@ -1,7 +1,0 @@
-<div class="block1">Имя:<input type="text" name="form_name" value="" size="30"  /></div>
-		<div class="block1" >Фамилия:<input type="text" name="form_sername" value="" size="30" /></div>
-		<div class="block1" >Пол:<input type="radio" name="form_radio" id="form-radio1" value="1" checked />
-		     <label for="form_radio1">Мужской</label>
-			 <input type="radio" name="form_radio" id="form-radio2" value="2"  />
-		     <label for="form_radio2">Женский</label></div>
-		<div class="block1">Возраст:<input type="text" name="age" value="" size="3"/>лет</div>
